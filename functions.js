@@ -294,6 +294,22 @@ function binarySearch(arr, target){
   }
   return "target not found"
 }
-
 // console.log(binarySearch([1,2,54,88,99],88)) //target 88 is found on index 3
+
+/*19. Find Elements Larger Than Number
+Write a JavaScript function that returns array elements larger than a number. */
+
+function largerEle(arr,num){
+  const result = [];
+  for(let ele of arr){
+    if(ele > num){
+      result.push(ele);
+    }
+    else{
+      continue;
+    }
+  }
+  return result
+}
+console.log(largerEle([1,32,43,14,65,12,10], 20))
 
