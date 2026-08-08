@@ -277,3 +277,23 @@ function uniqChar(wrd){
 Write a function for searching JavaScript arrays with binary searches.
 
 Note : A binary search searches by splitting an array into smaller and smaller chunks until it finds the desired value. */
+function binarySearch(arr, target){
+  low = 0
+  high = arr.length-1
+  while (low <= high){
+    mid = Math.floor((low+high)/2)
+    if(arr[mid]==target){
+      return `target ${target} is found on index ${mid}`;
+    };
+    if(arr[mid] < target){
+       low = mid+1;
+    }
+    if(arr[mid]>target){
+      high = mid-1
+    }
+  }
+  return "target not found"
+}
+
+// console.log(binarySearch([1,2,54,88,99],88)) //target 88 is found on index 3
+
