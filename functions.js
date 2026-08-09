@@ -311,5 +311,18 @@ function largerEle(arr,num){
   }
   return result
 }
-console.log(largerEle([1,32,43,14,65,12,10], 20))
+// console.log(largerEle([1,32,43,14,65,12,10], 20))
 
+/*20. Generate Random String ID
+Write a JavaScript function that generates a string ID (specified length) of random characters. Programming
+
+Sample character list : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" */
+function makeId(text){
+  strId = "";
+  char_list = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  for(let i of text){
+    strId += char_list.charAt(Math.floor(Math.random()*char_list.length));
+  }
+  return strId
+}
+console.log(makeId("programming"))
