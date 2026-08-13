@@ -325,4 +325,30 @@ function makeId(text){
   }
   return strId
 }
-console.log(makeId("programming"))
+// console.log(makeId("programming"))
+
+/*21. Fixed-Length Subsets
+Write a JavaScript function to get all possible subsets with a fixed length (for example 2) combinations in an array.
+
+Sample array : [1, 2, 3] and subset length is 2
+
+Expected output : [[1,2],[1,3],[2,3]] */
+function fixed_len_subsets(arr, size){
+   const n = arr.length ;
+   const result = [];
+   for(let i = 0;i<n-1; i++){
+    let subset = [arr[i]]
+    for(let j = i+1; j < n; j++){
+      if(subset.length < size){
+        subset.push(arr[j])
+      }
+      if(subset.length == size){
+        result.push(subset);
+        subset = [arr[i]]
+      }
+    }
+   }
+   return result;
+}
+// console.log(fixed_len_subsets([1,2,3,4,5],2))
+
