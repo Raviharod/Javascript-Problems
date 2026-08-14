@@ -352,3 +352,22 @@ function fixed_len_subsets(arr, size){
 }
 // console.log(fixed_len_subsets([1,2,3,4,5],2))
 
+
+/*22. Count Letter in String
+Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string.
+Sample arguments : 'w3resource.com', 'o'
+Expected output : 2 */
+function countLetter(str, letter){
+   let count = 0;
+   for(let i of str){
+    if(i==letter){
+      count+= 1
+    }
+    else{
+      continue
+    }
+   }
+   return count;
+}
+// console.log(countLetter('w3resource.com','o')) //2
+
