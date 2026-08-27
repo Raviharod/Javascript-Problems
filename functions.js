@@ -371,3 +371,28 @@ function countLetter(str, letter){
 }
 // console.log(countLetter('w3resource.com','o')) //2
 
+
+/*23. Find First Non-Repeated Character
+Write a JavaScript function to find the first not repeated character.
+Sample arguments : 'abacddbec'
+Expected output : 'e' */
+function firstNonRepChar(str){
+  const chars = {};
+  const n = str.length;
+  for(let i = 0;i<n;i++){
+    if(chars[str[i]]){
+      chars[str[i]] = chars[str[i]]+1
+    }
+    else{
+      chars[str[i]] = 1
+    }
+  }
+  for(let key in chars){
+    if(chars[key]==1){
+      return key
+    }
+  }
+  return "no unique char found"
+}
+str = "azbacddbecg";
+// console.log(firstNonRepChar(str));
