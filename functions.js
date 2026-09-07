@@ -422,3 +422,25 @@ function bubbleSort(arr) {
 
 const unsortedArray = [12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213];
 // console.log("Sorted array:", bubbleSort(unsortedArray)); 
+
+
+/*25. Find Longest Country Name
+Write a JavaScript function that accepts a list of country names as input and returns the longest country name as output.
+
+Sample function : Longest_Country_Name(["Australia", "Germany", "United States of America"])
+Expected output : "United States of America" */
+function Longest_Country_Name(countries){
+  let max_len = 0;
+  let longest = "";
+   for(let country of countries){
+    let len = country.length;
+     if(len > max_len){
+      max_len = len;
+      longest = country;
+     }
+   }
+  return [longest, max_len]
+}
+
+// console.log(Longest_Country_Name(["Australia", "Germany", "United States of America"]));
+
