@@ -444,3 +444,7 @@ function Longest_Country_Name(countries){
 
 // console.log(Longest_Country_Name(["Australia", "Germany", "United States of America"]));
 
+
+/*26. Longest Substring Without Repeating Characters
+
+Write a JavaScript function to find the longest substring in a given string without repeating characters. */
